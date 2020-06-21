@@ -140,5 +140,8 @@ createDetailsView = () => {
         $container.html('')
         let $view = $('<div class="card-details"><div class="img" style="background-image:url(./img/' + data.img + '.png);"></div><div class="description"><div class="dt">' + data.dt + '</div><div class="title">' + data.title + '</div><div class="desc">' + data.desc + '</div><div class="note">' + data.note + '</div></div></div>')
         $view.appendTo($container)
-    }
+        setTimeout(() => {
+            $("html, body").animate({scrollTop: 0}, animationSpeed, 'easeInOutExpo')
+        }, 100)
+}
 }
